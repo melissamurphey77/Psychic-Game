@@ -27,7 +27,7 @@
 
         var wins = 0;
         var losses = 0;
-        var guesses = 5;
+        var guesses = 3;
         var yourGuesses = [];
 
     
@@ -57,7 +57,7 @@
             
             if (userGuess === computerGuess) {
             wins++;
-            guesses = 5;
+            guesses = 3;
             yourGuesses = [];
             computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
             console.log(computerGuess)
@@ -65,36 +65,35 @@
             alert ("You ARE Psychic! ")
         
             }
-            else if (userGuess !== computerGuess) {
+            
+           else if (userGuess !== computerGuess) {
             guesses--;
-                if (guesses === 0) {
-                    losses++;
-                    yourGuesses = [];
-                    computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-                    console.log(computerGuess)
-                }
-        
+            
             alert ("Concentrate... " )
             
-
-
-
-            }
-
-            //for (let i=0; i>5; )
+            if (guesses === 0) {
+                yourGuesses = [];
+                guesses = 3;
+                losses++;
+                computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                    console.log(computerGuess)
+                    alert ("Clear your mind and try again, my friend")
+             }
         
             
-            
+        }
+
             directionsText.textContent = "";
 
             userChoiceText.textContent = "Your letter was: " + userGuess;
             //computerChoiceText.textContent = "My letter was: " + computerGuess;
-            winsText.textContent = "wins: " + wins;
-            lossesText.textContent = "losses: " + losses;
-            guessesText.textContent = "guesses left: " + guesses;
-            yourGuessesText.textContent = "Your guesses so far: " + yourGuesses;
+            winsText.textContent = "Wins: " + wins;
+            lossesText.textContent = "Losses: " + losses;
+            guessesText.textContent = "Guesses Left: " + guesses;
+            yourGuessesText.textContent = "Your Guesses So Far: " + yourGuesses;
+
+        }
         
-        };
         
     </script>
 
