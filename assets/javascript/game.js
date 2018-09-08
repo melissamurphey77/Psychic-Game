@@ -1,3 +1,11 @@
+        $(document).ready(function loop() {
+            
+            $('#psychic').fadeIn(1500).delay(3500).fadeOut(1500);
+            $('#psychic').delay(5000).fadeIn(1500);
+            setTimeout(function(){loop()}, 16000);
+        });
+        
+        
         console.log("testcode") 
         
         
