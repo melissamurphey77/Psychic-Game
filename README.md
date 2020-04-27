@@ -1,5 +1,4 @@
 # Psychic-Game
-3rd Assignment making a game
 
 This game is to have the user guess what letter the computer has picked.
 
